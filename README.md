@@ -5,6 +5,8 @@ Jabir TV is a simple yet powerful smart tv project made by [Jabir Technologies](
 ## TODO
 
 - [ ] Start the web app 
+    - [ ] Writing the helper for weather data retrival
+    - [ ] Sort out the needed data
 - [ ] Add basic functionality of showing weather
 - [ ] Improve the UI 
 - [ ] Add a TV app 
