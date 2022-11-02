@@ -7,6 +7,7 @@ module ApplicationHelper
         res = JSON.parse(res.body)
         
         @data = [res["main"]["temp"], res["main"]["feels_like"], res["main"]["temp_min"], res["main"]["temp_max"]]
-        return res["main"]
+        @icon = res["weather"][0]["icon"]
+        return [@data, @icon]
     end
 end
