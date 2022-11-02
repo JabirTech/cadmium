@@ -8,6 +8,6 @@ module ApplicationHelper
         
         @data = [res["main"]["temp"], res["main"]["feels_like"], res["main"]["temp_min"], res["main"]["temp_max"]]
         @icon = res["weather"][0]["icon"]
-        return [@data, @icon]
+        return @weather_data = [@data, @icon]
     end
 end
