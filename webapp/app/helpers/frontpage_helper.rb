@@ -1,2 +1,9 @@
 module FrontpageHelper
+    def weather(city)
+        api_token = ENV['OPEN_WEATHER_MAP_API']
+        base_url = "https://api.openweathermap.org/data/2.5/weather?city=#{city}&appid=#{api_token}"
+
+        res = HTTParty.get(base_url)
+        return res.body
+    end
 end
