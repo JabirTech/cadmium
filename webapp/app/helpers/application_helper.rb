@@ -4,8 +4,9 @@ module ApplicationHelper
         base_url = "https://api.openweathermap.org/data/2.5/weather?lat=#{lat}&lon=#{lon}&units=metric&appid=#{api_token}"
 
         res = HTTParty.get(base_url)
-        res = res.body 
-
-        return res.class
+        res = JSON.parse(res.body)
+        
+        @data = [res["main"]["temp"], res["main"]["feels_like"], res["main"]["temp_min"], res["main"]["temp_max"]]
+        return res["main"]
     end
 end
