@@ -1,1 +1,6 @@
-<%= @weather %>
+<h1> Weather Status </h1>
+<p><img src="http://openweathermap.org/img/wn/<%= @weather[1]%>@4x.png" /></p>
+<p><strong>Temperature: </strong><%= @weather[0][0] %></p>
+<p><strong>Feels Like: </strong><%= @weather[0][1] %></p>
+<p><strong>Min Temperature: </strong><%= @weather[0][2] %></p>
+<p><strong>Max Temperature: </strong><%= @weather[0][3] %></p>
