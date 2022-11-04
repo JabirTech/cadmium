@@ -2,7 +2,7 @@
     <div class="col">
         <h1> Weather Status </h1>
         <span class="p-5 m-2 bg-secondary rounded-circle" ><img class="img-fluid" src="http://openweathermap.org/img/wn/<%= @weather[1]%>@4x.png" /></span>
-        <p><strong>Temperature: </strong><%= @weather[0][0] %></p>
+        <span class="text-center m-2 p-2"><h2><%= @weather[0][0] %> °C</h2></span>
         <p><strong>Feels Like: </strong><%= @weather[0][1] %></p>
         <p><strong>Min Temperature: </strong><%= @weather[0][2] %></p>
         <p><strong>Max Temperature: </strong><%= @weather[0][3] %></p>
