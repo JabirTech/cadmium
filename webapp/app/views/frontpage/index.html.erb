@@ -1,12 +1,36 @@
-<div class="row">
-    <div class="col">
-        <h1> Weather Status </h1>
-        <span class="p-5 m-2 bg-secondary rounded-circle" ><img class="img-fluid" src="http://openweathermap.org/img/wn/<%= @weather[1]%>@4x.png" /></span>
-        <span class="text-center m-2 p-2"><h2><%= @weather[0][0] %> °C</h2></span>
-        <p><strong>Feels Like: </strong><%= @weather[0][1] %></p>
-        <p><strong>Min Temperature: </strong><%= @weather[0][2] %></p>
-        <p><strong>Max Temperature: </strong><%= @weather[0][3] %></p>
+<div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+
+            <div class="d-flex">
+              <h6 class="flex-grow-1">Warsaw</h6>
+              <h6>15:07</h6>
+            </div>
+
+            <div class="d-flex flex-column text-center mt-5 mb-4">
+              <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> <%= @weather[0][0] %>°C </h6>
+              <span class="small" style="color: #868B94">Stormy</span>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div class="flex-grow-1" style="font-size: 1rem;">
+                <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> <%= @weather[0][3] %>
+                  </span></div>
+                <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> <%= @weather[0][2] %> </span>
+                </div>
+                <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> <%= @weather[0][1] %> </span>
+                </div>
+            </div>
+            <div>
+                <img src="http://openweathermap.org/img/wn/<%= @weather[1]%>@4x.png"
+                  width="100px">
+            </div>
+        </div>
+
+        </div>
     </div>
-    <div class="col">
+
     </div>
 </div>
