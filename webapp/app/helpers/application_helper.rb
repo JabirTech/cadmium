@@ -14,9 +14,9 @@ module ApplicationHelper
     def get_movie_data
         base_url = "http://localhost:5000/"
         res = HTTParty.get(base_url)
-        res = JSON.parse(red.body)
+        res = JSON.parse(res.body)
         res = res["results"]
-        
+
         return res
     end
 end
