@@ -28,7 +28,6 @@
           <div class="card-body p-4">
             <div class="d-flex flex-column text-center mt-5 mb-4">
               <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> <%= Time.now.strftime("%H : %M") %> </h6>
-              <span class="small" style="color: #868B94">Stormy</span>
             </div>
 
             <div class="d-flex align-items-center">
@@ -52,7 +51,6 @@
           <div class="card-body p-4">
             <div class="d-flex flex-column text-center mt-5 mb-4">
               <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> <%= @weather[0][0] %>°C </h6>
-              <span class="small" style="color: #868B94">Stormy</span>
             </div>
 
             <div class="d-flex align-items-center">
@@ -75,37 +73,39 @@
     
 </div>
 
-<div class="p-2">
+<div class="p-2 m-3">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <!--- START --->
-    <div clas="col">
-      <div class="card inner-box bg-dark text-white" style="max-width: 18rem;">
+      <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
         <img class="card-img" src="<%= @data[0]['poster'] %>" alt="Card image">
         <div class="card-img-overlay">
           <h5 class="card-title"><%= @data[0]['name'] %></h5>
         </div>
       </div>
-    </div>
     <!--- END --->
     <!--- START --->
-    <div clas="col">
-      <div class="card inner-box bg-dark text-white" style="max-width: 18rem;">
+      <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
         <img class="card-img" src="<%= @data[1]['poster'] %>" alt="Card image">
         <div class="card-img-overlay">
           <h5 class="card-title"><%= @data[1]['name'] %></h5>
         </div>
       </div>
-    </div>
     <!--- END --->
     <!--- START --->
-    <div clas="col">
-      <div class="card inner-box bg-dark text-white" style="max-width: 18rem;">
+      <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
         <img class="card-img" src="<%= @data[2]['poster'] %>" alt="Card image">
         <div class="card-img-overlay">
           <h5 class="card-title"><%= @data[2]['name'] %></h5>
         </div>
       </div>
-    </div>
+    <!--- END --->
+    <!--- START --->
+      <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
+        <img class="card-img" src="<%= @data[3]['poster'] %>" alt="Card image">
+        <div class="card-img-overlay">
+          <h5 class="card-title"><%= @data[3]['name'] %></h5>
+        </div>
+      </div>
     <!--- END --->
   </div>
 </div>
