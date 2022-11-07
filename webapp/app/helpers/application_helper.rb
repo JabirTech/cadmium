@@ -10,4 +10,11 @@ module ApplicationHelper
         @icon = res["weather"][0]["icon"]
         return @weather_data = [@data, @icon]
     end
+
+    def get_movie_data
+        base_url = "http://localhost:5000/"
+        res = HTTParty.get(base_url)
+
+        return res
+    end
 end
