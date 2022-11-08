@@ -76,6 +76,7 @@
 </div>
 
 <div class="p-2 m-3">
+  <% @data.each_slice(4) do |datum| %>
   <div class="row d-flex justify-content-center align-items-center h-100">
     <!--- START --->
       <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
@@ -110,4 +111,5 @@
       </div>
     <!--- END --->
   </div>
+  <% end %>
 </div>
