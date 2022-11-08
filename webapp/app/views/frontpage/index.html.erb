@@ -77,39 +77,41 @@
 
 <div class="p-2 m-3">
   <% @data.each_slice(4) do |datum| %>
-  <div class="row d-flex justify-content-center align-items-center h-100">
-    <!--- START --->
-      <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
-        <img class="card-img" src="<%= @data[0]['poster'] %>" alt="Card image">
-        <div class="card-img-overlay">
-          <h5 class="card-title"><%= @data[0]['name'] %></h5>
+  <% if datum != nil && datum.length == 4 %>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <!--- START --->
+        <div class="col card inner-box bg-dark text-white p-2 m-2" style="max-width: 18rem;">
+          <img class="card-img" src="<%= datum[0]['poster'] %>" alt="Card image">
+          <div class="card-img-overlay">
+            <h5 class="card-title"><%= datum[0]['name'] %></h5>
+          </div>
         </div>
-      </div>
-    <!--- END --->
-    <!--- START --->
-      <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
-        <img class="card-img" src="<%= @data[1]['poster'] %>" alt="Card image">
-        <div class="card-img-overlay">
-          <h5 class="card-title"><%= @data[1]['name'] %></h5>
+      <!--- END --->
+      <!--- START --->
+        <div class="col card inner-box bg-dark text-white p-2 m-2" style="max-width: 18rem;">
+          <img class="card-img" src="<%= datum[1]['poster'] %>" alt="Card image">
+          <div class="card-img-overlay">
+            <h5 class="card-title"><%= datum[1]['name'] %></h5>
+          </div>
         </div>
-      </div>
-    <!--- END --->
-    <!--- START --->
-      <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
-        <img class="card-img" src="<%= @data[2]['poster'] %>" alt="Card image">
-        <div class="card-img-overlay">
-          <h5 class="card-title"><%= @data[2]['name'] %></h5>
+      <!--- END --->
+      <!--- START --->
+        <div class="col card inner-box bg-dark text-white p-2 m-2" style="max-width: 18rem;">
+          <img class="card-img" src="<%= datum[2]['poster'] %>" alt="Card image">
+          <div class="card-img-overlay">
+            <h5 class="card-title"><%= datum[2]['name'] %></h5>
+          </div>
         </div>
-      </div>
-    <!--- END --->
-    <!--- START --->
-      <div class="col card inner-box bg-dark text-white" style="max-width: 18rem;">
-        <img class="card-img" src="<%= @data[3]['poster'] %>" alt="Card image">
-        <div class="card-img-overlay">
-          <h5 class="card-title"><%= @data[3]['name'] %></h5>
+      <!--- END --->
+      <!--- START --->
+        <div class="col card inner-box bg-dark text-white p-2 m-2" style="max-width: 18rem;">
+          <img class="card-img" src="<%= datum[3]['poster'] %>" alt="Card image">
+          <div class="card-img-overlay">
+            <h5 class="card-title"><%= datum[3]['name'] %></h5>
+          </div>
         </div>
-      </div>
-    <!--- END --->
+      <!--- END --->
   </div>
+  <% end %>
   <% end %>
 </div>
